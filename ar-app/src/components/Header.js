@@ -7,9 +7,13 @@ const Header = (props) => {
     <div>
       <Jumbotron fluid>
         <Container fluid>
-          <h2 className="display-3">Lorem ipsum</h2>
+          <p className="display-4">Discover your favourite authors and books</p>
           <SearchInput/>
         </Container>
+        <div className="header-book">
+       <span>Still from:</span> Before She was Harriet by Lesa Cline-Ransome Author <br/>
+        & James E. Ransome Illustrator
+        </div>
       </Jumbotron>
     </div>
   );

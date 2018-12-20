@@ -38,9 +38,10 @@ import {
         render() {
           return (
             <div className="navbarDiv">
-              <Navbar light expand="md">
+              <Navbar classname="navbar" expand="md">
                 <NavbarBrand tag={props => <Link to="/" {...props} />}>
-                  AW
+                <img src="/logo-vit.png" alt="logo" />
+
                 </NavbarBrand>
                 <NavbarToggler onClick={this.toggle}>
                   <span className="fa fa-reorder" />
@@ -60,7 +61,7 @@ import {
                       <NavLink
                         onClick={this.toggle}
                         tag={props => <Link to="/" {...props} />}
-                      >Articles
+                      >News
 
                         <hr />
                       </NavLink>
@@ -68,7 +69,7 @@ import {
                     <NavItem>
                       <NavLink
                         onClick={this.toggle}
-                        tag={props => <Link to="/" {...props} />}
+                        tag={props => <Link to="/Contact" {...props} />}
                       >
                         Contact
                       </NavLink>

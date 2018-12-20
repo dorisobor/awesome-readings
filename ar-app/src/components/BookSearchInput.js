@@ -37,9 +37,8 @@ class BookSearchInput extends Component {
 
 handleChange = event => {
     this.setState({ bookSearch: event.target.value.toLowerCase()})
-    this.setState({ error:''});
 
-  if (this.state.bookSearch.length > 1) {
+if (this.state.bookSearch && this.state.bookSearch.length > 1) {
 
         this.handleSubmit(event)
     }
@@ -64,6 +63,8 @@ handleChange = event => {
       })
 
     })
+    this.setState({ error:''});
+
     console.log("you searched for" , this.state.bookSearch);
   }
 }

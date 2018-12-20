@@ -1,34 +1,174 @@
 .App {
   text-align: center;
 }
+
 .jumbotron{
   background-image:url(./images/header-image.jpg);
   background-repeat:no-repeat;
   background-size: cover;
-  background-position: center center;
+  filter: grayscale(50%);
+  background-attachment: fixed;
+  position: relative;
+}
+body {
+  margin: 0 0 150px;
+  position: relative;
+
 }
 
+/*navbar*/
+.navbar{
+  background-color: #101526;
+  color:white;
+}
+
+
+.navbar-light .navbar-toggler {
+  border-color: azure !important;
+}
+
+.navbar-toggler {
+  padding: 7px 13px !important;
+  font-size: 1.4em !important;
+}
+
+a.nav-link {
+  color: white !important;
+  font-weight: 400;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 3px;
+  transition: 150ms;
+}
+
+a.nav-link:hover {
+  color: azure !important;
+  text-decoration:underline !important;
+}
+
+.navbar-brand a:hover {
+  color: azure !important;
+}
+
+
+a.navbar-brand {
+  color: azure !important ;
+  margin-left: 8px;
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+}
+
+a.navbar-brand img {
+  height: 35px;
+  margin-left: 10px;
+}
+
+li hr {
+  background-color: azure !important;
+}
+
+/*header*/
+.display-4{
+  color:azure;
+  font-size: 2em !important;
+  margin:10px;
+  padding:10px;
+}
+
+/*search field*/
+
+.form{
+  margin:50px;
+  padding:50px;
+}
 .form-group{
-  max-width: 60%;
+  max-width: 50%;
   padding:0px;
   margin:auto;
   background-color:white;
+.booksearch {
+
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: rgba(0,0,0,0.8) 0 4px 14px 0;
+    padding: 0px;
+    border-radius: 0 0 12px 12px;
+    font-size: 13px;
+    width:100%; /* its width according to input width */
 
 .book-search-list{
-  width:100%; /* its width according to input width */
   border:1px solid #ccc;
   height:auto;
   padding:0px;
   margin:0px;
  li{
  text-align: left;
+ img{
+  width: 90px;
+ }
  }
  }
 }
+}
+.contactWrapper {
+  text-align: center;
+
+.underline {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+  border-bottom: 1px solid black;
+}
+
+
+ }
+/* reacttrap footer styling*/
+
+.footer {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  height: 260px;
+  padding: 10px 0 0 0;
+  font-size: 1em;
+  width: 100%;
+  background-color: #101526;
+  left: 0;
+  bottom: 0;
+
+}
+.card-footer {
+  padding: .75rem 1.25rem;
+  border-top: none;
+}
 
 /* Media query */
-@media (min-width: 700px) {
+
+@media screen and (min-width: 768px) {
+
   .jumbotron {
-      height: 550px;
+    height: 550px;
+    .container-jumbo {
+      position: relative;
+      top: 50px;
+    }
+  }
+
+  .navbar {
+    min-height: 50px;
+  }
+
+  a.navbar-brand {
+    margin-left: 35px;
+  }
+
+  li hr {
+    display: none;
+  }
+
+  .nav-item {
+    margin-left: 35px;
+    margin-right: 35px;
   }
 }
