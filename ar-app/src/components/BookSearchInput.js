@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {Form, FormGroup, Label, Input, Button,InputGroupAddon, InputGroup } from "reactstrap";
-// import _ from 'lodash';
-import axios from 'axios';
+import {Form, FormGroup, Input, Button,InputGroupAddon, InputGroup } from "reactstrap";
+// import axios from 'axios';
 import SearchGallery from './BookSearchStyling.js';
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { faSearch } from "@fortawesome/free-solid-svg-icons/faSearch";
