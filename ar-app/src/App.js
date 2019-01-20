@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.scss';
-import { library } from '@fortawesome/fontawesome-svg-core'
 
 //components
 import Home from './components/Home.js';

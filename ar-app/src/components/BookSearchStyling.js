@@ -1,70 +1,39 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { BrowserRouter as Route, Link } from "react-router-dom";
+import InfoBookPage from './InfoBookPage'
+class SearchGallery extends Component {
+  render() {
+    return (
+      <div className="booksearch">
+        {this.props.items.map(items => {
+          let { title, imageLinks } = items.volumeInfo;
+          return (
+            <ul className="book-search-list">
+              <li key={items.id}>
+                <button className="book-button">
+                  <Link
+                    to={items.id}>
+                    <img
+                      src={imageLinks.thumbnail}
+                      alt={title}
+                      className="bookImage"
+                    />
+                    <p>{title}</p>
+                  </Link>
 
+                </button>
 
-// class SearchGallery extends Component{
-//     render(){
-//         return (
-//             <div classname="book-results">
-//             {
-//                 this.props.items.map((item , i) => {
-//                     let {title, imageLinks , infoLink} = item.volumeInfo
-//                     return (
-//                         <a href ={infoLink}
-//                         target = "_blank"
-//                         rel="noopener noreferrer"
-//                         key={i} className ="book">
-//                         <img
-//                         src ={imageLinks !== undefined? imageLinks.thumbnail : ''}
-//                         alt ={title}
-//                         className = "bookImage"
-//                         />
-//                         <div className="titleText">{title}</div>
+              </li>
+            </ul>
 
-//                         </a>
+          );
 
-//                     );
-//                 })
-//             }</div>
+        })}
+      <Route path="/id" component={InfoBookPage}/>
 
-//         );
-//     }
-// }
-
-
-class SearchGallery extends Component{
-    render(){
-        return (
-            <div className="booksearch">
-            {
-                this.props.items.map((item) => {
-                    let {title, imageLinks , infoLink, id} = item.volumeInfo
-                    return (
-                        <ul className="book-search-list">
-                        <li key={id}>
-                        <a href ={infoLink}
-                        target = "_blank"
-                        rel="noopener noreferrer"
-                        key={id} className ="book">
-                        <img
-                        // src ={imageLinks !== undefined? imageLinks.thumbnail : ''}
-                        src ={imageLinks.thumbnail}
-                        alt ={title}
-                        className = "bookImage"
-                        />
-                       <p>{title}</p>
-
-                        </a>
-                       </li>
-                     </ul>
-                    );
-                })
-            }
-            </div>
-
-        );
-    }
+      </div>
+    );
+  }
 }
-
-
 
 export default SearchGallery;
